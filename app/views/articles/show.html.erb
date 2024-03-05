@@ -1,0 +1,8 @@
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+<div class="d-flex">
+<%= link_to 'Back to Articles', articles_path, class: 'btn btn-primary' %>
+<%= link_to 'Edit', edit_article_path(@article), class: 'ml-3 btn btn-success' %>
+<%= link_to 'Delete', article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} , class: "ml-3 btn btn-danger" %>
+</div>
+
